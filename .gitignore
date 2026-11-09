@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+*.log
+.taste-skill/chrome-*/
+.impeccable/
+.taste-skill/
+source-assets/
+scripts/fetch-check.cjs
+scripts/prepare-assets.cjs
+scripts/refine.cjs
+scripts/text-spacing.cjs

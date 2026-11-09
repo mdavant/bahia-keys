@@ -1,0 +1,1 @@
+const urls=['/','/services','/services/','/services/index.html','/offres/','/a-propos/','/contact/','/mentions-legales/','/confidentialite/','/url-inexistante'];(async()=>{for(const p of urls){const r=await fetch('http://127.0.0.1:4173'+p);const html=await r.text();console.log(r.status,p,html.match(/<title>(.*?)<\/title>/)?.[1], 'h1:',(html.match(/<h1[ >]/g)||[]).length)}})();
