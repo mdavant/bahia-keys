@@ -1,7 +1,7 @@
 # Provenance des ressources
 
 ## Identité
-`public/media/bahia-monogram.webp` et `public/favicon.png` dérivent du fichier client « Monogram BK avec clé classique.png ». Recadrage des marges et réduction uniquement, aucun redessin vectoriel. L'original reste dans Downloads. La maquette client sert de référence de direction artistique et n'est pas utilisée comme image de site.
+`public/media/bahia-monogram.webp` et `public/favicon.png` dérivent du fichier client « Monogram BK avec clé classique.png ». Fond retiré avec imagegen le 10 novembre 2026, puis réduction avec conservation du canal alpha. Aucun redessin vectoriel. L'original reste dans Downloads. La maquette client sert de référence de direction artistique et n'est pas utilisée comme image de site.
 
 ## Photographies
 

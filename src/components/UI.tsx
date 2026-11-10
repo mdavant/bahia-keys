@@ -50,7 +50,7 @@ export function Mark({ footer = false }: { footer?: boolean }) {
       className={`brand ${footer ? "brand-footer" : ""}`}
       aria-label="Bahia Keys — Accueil"
     >
-      <img src="/media/bahia-monogram.webp" width="76" height="50" alt="" />
+      <img src="/media/bahia-monogram.webp?v=2" width="76" height="50" alt="" />
       <span>
         BAHIA KEYS<small>CONCIERGERIE À ORAN</small>
       </span>
