@@ -18,3 +18,10 @@ Le gate Taste a été exécuté. Il ne valide pas ce site : plusieurs règles im
 ## Avant ouverture commerciale
 
 Compléter les coordonnées, WhatsApp, domaine final, informations légales et politique de confidentialité ; valider les prestations et commissions ; connecter la réception du formulaire. Vérifier les accès directs et HTTPS sur Hostinger. Les photographies authentiques et leurs licences sont documentées dans ASSETS.md.
+
+## Corrections du 10 novembre 2026
+
+- Logo et favicon : fond transparent vérifié (canal alpha 0–255), références versionnées pour renouveler le cache.
+- Services de l’accueil : volets natifs details/summary, ouverture au clic et fermeture avec Entrée vérifiées sans changement de page ; indicateur +/−.
+- Navigation sticky : position haute égale à 0 après défilement, sur ordinateur et mobile 390 px. Menu mobile ouvert/fermé et absence de débordement vérifiés.
+- TypeScript, build Vite et pré-rendu des huit pages réussis. Vérification sur aperçu local.

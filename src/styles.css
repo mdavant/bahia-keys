@@ -225,7 +225,8 @@ textarea {
 .header {
   height: 108px;
   background: var(--ivory);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 40;
   border-bottom: 1px solid var(--line);
 }
@@ -1757,7 +1758,7 @@ textarea {
     --section: 76px;
   }
   html {
-    scroll-padding-top: 24px;
+    scroll-padding-top: 98px;
   }
   .header {
     height: 82px;
