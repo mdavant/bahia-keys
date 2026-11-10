@@ -25,3 +25,7 @@ Compléter les coordonnées, WhatsApp, domaine final, informations légales et p
 - Services de l’accueil : volets natifs details/summary, ouverture au clic et fermeture avec Entrée vérifiées sans changement de page ; indicateur +/−.
 - Navigation sticky : position haute égale à 0 après défilement, sur ordinateur et mobile 390 px. Menu mobile ouvert/fermé et absence de débordement vérifiés.
 - TypeScript, build Vite et pré-rendu des huit pages réussis. Vérification sur aperçu local.
+
+## Navigation explicite et fixe
+
+Les volets de services sont remplacés, à la demande du client, par des liens « Voir le service » avec flèche. Navigation vers /services vérifiée. En-tête position:fixed et espace réservé responsive ; haut de la barre à 0 après 1425 px de défilement. TypeScript, build et pré-rendu validés.
