@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowDown, ArrowUpRight, MapPin, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 import {
   Button,
   TextLink,
@@ -112,20 +113,14 @@ export function Home() {
           </div>
           <div className="service-list">
             {services.map((s) => (
-              <details className="service-disclosure" key={s.short}>
-                <summary className="service-row">
+              <Link to="/services" className="service-row" key={s.short} aria-label={"Voir le service : " + s.short}>
                 <ServiceIcon name={s.icon} />
                 <h3>{s.short}</h3>
                 <p>{s.text}</p>
                 <span className="service-open">
-                  <Plus size={20} aria-hidden="true" />
+                  Voir le service <ArrowUpRight size={18} aria-hidden="true" />
                 </span>
-                </summary>
-                <div className="service-detail">
-                  <p>{s.detail}</p>
-                  <ul>{s.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                </div>
-              </details>
+              </Link>
             ))}
           </div>
           <TextLink to="/services">Voir le détail des services</TextLink>

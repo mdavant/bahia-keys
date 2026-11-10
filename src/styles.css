@@ -578,7 +578,7 @@ textarea {
   padding: 28px 0;
   transition: padding 200ms var(--ease-out);
 }
-.service-disclosure:last-child {
+.service-row:last-child {
   border-bottom: 1px solid #cfc1b5;
 }
 .service-row > svg {
@@ -2330,14 +2330,13 @@ main:focus-visible{outline:2px solid var(--action);outline-offset:-2px}
 .not-found>span,.step-list>button>span,.offer-card:not(.premium) .offer-top{color:var(--action)}
 @media(max-width:640px){.step-number{font-size:100px}.step-panel{min-height:330px}}
 
-/* Native service disclosures: keyboard and no-JavaScript support. */
-.service-row { cursor: pointer; list-style: none; }
-.service-row::-webkit-details-marker { display: none; }
-.service-detail { padding: 0 70px 28px 78px; color: var(--muted); font-size: 14px; }
-.service-detail ul { margin: 18px 0 0; padding-left: 20px; }
-.service-detail li + li { margin-top: 6px; }
-.service-disclosure[open] .service-open { background: var(--action); color: var(--ivory); }
-.service-disclosure[open] .service-open svg path:last-child { display: none; }
-@media(max-width:1100px) { .service-detail { padding-left: 60px; } }
-@media(max-width:900px) { .service-detail { padding-left: 55px; padding-right: 0; } }
-@media(max-width:640px) { .service-detail { padding-left: 45px; font-size: 13px; } }
+
+/* Explicit navigation links, with a full text label at every breakpoint. */
+.service-row { grid-template-columns: 50px 1fr 1.1fr max-content; }
+.service-open { width: auto; height: auto; min-height: 44px; padding: 9px 14px; gap: 8px; border-radius: 100px; white-space: nowrap; font-size: 12px; font-weight: 500; }
+@media (max-width:1100px) { .service-row { grid-template-columns: 40px 1fr 1fr max-content; } }
+@media (max-width:900px) {
+  .service-row { grid-template-columns: 35px 1fr; }
+  .service-row .service-open { grid-column: 2; grid-row: 3; justify-self: start; }
+}
+@media (max-width:640px) { .service-row { grid-template-columns: 28px 1fr; } }
