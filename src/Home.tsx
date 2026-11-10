@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ArrowDown, ArrowUpRight, MapPin, Plus } from "lucide-react";
 import {
   Button,
@@ -113,14 +112,20 @@ export function Home() {
           </div>
           <div className="service-list">
             {services.map((s) => (
-              <Link to="/services" className="service-row" key={s.short}>
+              <details className="service-disclosure" key={s.short}>
+                <summary className="service-row">
                 <ServiceIcon name={s.icon} />
                 <h3>{s.short}</h3>
                 <p>{s.text}</p>
                 <span className="service-open">
-                  <Plus size={20} />
+                  <Plus size={20} aria-hidden="true" />
                 </span>
-              </Link>
+                </summary>
+                <div className="service-detail">
+                  <p>{s.detail}</p>
+                  <ul>{s.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                </div>
+              </details>
             ))}
           </div>
           <TextLink to="/services">Voir le détail des services</TextLink>

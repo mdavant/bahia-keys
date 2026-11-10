@@ -577,7 +577,7 @@ textarea {
   padding: 28px 0;
   transition: padding 200ms var(--ease-out);
 }
-.service-row:last-child {
+.service-disclosure:last-child {
   border-bottom: 1px solid #cfc1b5;
 }
 .service-row > svg {
@@ -1488,7 +1488,7 @@ textarea {
   .service-row:hover .service-open {
     background: var(--action);
     color: var(--ivory);
-    transform: rotate(90deg);
+
   }
   .service-row:hover h3 {
     color: var(--action);
@@ -2328,3 +2328,15 @@ main:focus-visible{outline:2px solid var(--action);outline-offset:-2px}
 .step-number{font-size:100px;top:15px}
 .not-found>span,.step-list>button>span,.offer-card:not(.premium) .offer-top{color:var(--action)}
 @media(max-width:640px){.step-number{font-size:100px}.step-panel{min-height:330px}}
+
+/* Native service disclosures: keyboard and no-JavaScript support. */
+.service-row { cursor: pointer; list-style: none; }
+.service-row::-webkit-details-marker { display: none; }
+.service-detail { padding: 0 70px 28px 78px; color: var(--muted); font-size: 14px; }
+.service-detail ul { margin: 18px 0 0; padding-left: 20px; }
+.service-detail li + li { margin-top: 6px; }
+.service-disclosure[open] .service-open { background: var(--action); color: var(--ivory); }
+.service-disclosure[open] .service-open svg path:last-child { display: none; }
+@media(max-width:1100px) { .service-detail { padding-left: 60px; } }
+@media(max-width:900px) { .service-detail { padding-left: 55px; padding-right: 0; } }
+@media(max-width:640px) { .service-detail { padding-left: 45px; font-size: 13px; } }
